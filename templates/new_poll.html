@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container  text-secondary mt-3">
+    <!-- <h3>Choose a Poll</h3> -->
+    <div class="card">
+        <div class="card-body">
+            <form action='{{url_for("create_poll")}}' method="POST">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th class="text-center">Poll Text</th>
+                            <td ><div class="input-group mb-3 ">
+                                
+                                <input type="text" class="form-control" 
+                                name ="poll"  aria-describedby="basic-addon1">
+                              </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Option 1</th>
+                            <td ><div class="input-group mb-3 w-50 ">
+                                
+                                <input type="text" class="form-control " 
+                                name ="option1"  aria-describedby="basic-addon1">
+                              </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Option 2</th>
+                            <td ><div class="input-group mb-3 w-50 ">
+                                
+                                <input type="text" class="form-control " 
+                                name ="option2"  aria-describedby="basic-addon1">
+                              </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Option 3</th>
+                            <td ><div class="input-group mb-3 w-50 ">
+                                
+                                <input type="text" class="form-control " 
+                                name ="option3"  aria-describedby="basic-addon1">
+                              </div>
+                            </td>
+                        </tr>
+                        <tr >
+                            <td colspan="2" class="text-center align-items-center">                                <div class="input-group mb-3  text-center  ">
+                                <button class="btn btn-primary mt-3 text-center">
+                                
+                                    <input type="submit" 
+                                    name ="option2"  
+                                    class="form-control-plaintext text-white" aria-describedby="basic-addon1">
+                                    </button>
+                                  </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+                
+      <button class="btn btn-danger mt-3">
+        <a class="text-light text-decoration-none"  href='{{url_for("index")}}'>Go Back</a> 
+    </button>
+     
+</div>
+{% endblock %}

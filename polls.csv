@@ -1,0 +1,6 @@
+id,poll,option1,option2,option3,votes1,votes2,votes3
+1,Which programming language do you find most essential for modern development?,Python,JavaScript,Java,2,1,1
+2,What's your preferred cloud computing platform?,Amazon Web Services(AWS),Microsoft Azure,Google Cloud Platform(GCP),1,0,0
+3,Which operating system do you prefer for personal use?,Windows,macOS,Linux,0,0,0
+4,What's your preferred method of software deployment?,Continuous Integration/Continuous Deployment (CI/CD),Manual deployment,Automated deployment with scripts,0,0,1
+5,What's your preferred method of learning new IT skills?, Online courses and tutorials, Books and written resources,Hands-on workshops and training sessions,0,0,0

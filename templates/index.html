@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container  text-secondary mt-3">
+    <h3>Choose a Poll</h3>
+    
+      <div class="list-group w-100">
+        {% for key, value in polls.iterrows() %}
+         <a href='{{url_for("polls", id = key)}}' class="list-group-item list-group-item-action " >{{value["poll"]}}</a>
+           {% endfor %}
+        
+      </div>
+      <button class="btn btn-primary mt-3">
+        <a class="text-light text-decoration-none"  href='{{url_for("create_poll")}}'>Create Poll</a> 
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container  text-secondary mt-3">
+    <!-- <h3>Choose a Poll</h3> -->
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{poll['poll']}}</h5>
+          <table class="table table-hover">
+            <thead>
+                <th>Option</th>
+                <th>Votes</th>
+                <th></th>
+            </thead>    
+            <tbody>
+                <tr>
+                    <td><p class="card-text">{{poll['option1']}}  </p></td>
+                    <td> {{poll['votes1']}} </td>
+                    <td> <button class="btn btn-primary">
+                        <a class="text-light text-decoration-none"  href='{{url_for("vote", id = poll.id, option =  1)}}'>Vote</a> 
+                    </button></td>
+                </tr>
+                <tr>
+                    <td><p class="card-text">{{poll['option2']}}  </p></td>
+                    <td> {{poll['votes2']}} </td>
+                    <td> <button class="btn btn-primary">
+                        <a class="text-light text-decoration-none"  href='{{url_for("vote", id = poll.id, option =  2)}}'>Vote</a> 
+                    </button></td>
+                </tr>
+                <tr>
+                    <td><p class="card-text">{{poll['option3']}}  </p></td>
+                    <td> {{poll['votes3']}} </td>
+                    <td> <button class="btn btn-primary">
+                        <a class="text-light text-decoration-none"  href='{{url_for("vote", id = poll.id, option =  3)}}'>Vote</a> 
+                    </button></td>
+                </tr>
+            </tbody>
+        </table>          
+        </div>
+       
+      </div>
+      <button class="btn btn-danger mt-3">
+        <a class="text-light text-decoration-none"  href='{{url_for("index")}}'>Go Back</a> 
+    </button>
+     
+</div>
+{% endblock %}
